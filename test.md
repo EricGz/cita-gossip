@@ -1,4 +1,4 @@
-测试相关：
+﻿测试相关：
 电脑上需要的软件：
 xming（windows上用来打开xterm的）
 xshell
@@ -14,6 +14,3 @@ huaweisdn
 
 如果没有rustc
 xterm h1(host) 进入后先: source $HOME/.cargo/env
-
-
-##ttrttt##
