@@ -14,3 +14,6 @@ huaweisdn
 
 如果没有rustc
 xterm h1(host) 进入后先: source $HOME/.cargo/env
+
+
+##ttrttt##
