@@ -1,4 +1,8 @@
 # Test instruction
+测试相关：
+电脑上需要的软件：
+xming（windows上用来打开xterm的）
+xshell
 
 ## Software：
 
@@ -18,3 +22,5 @@ File path：~/gossip
  - if the switch of the topology, you have to run "ovsstartup.sh" in command line.
 
  - if "rustc is not a command" or "cargo is not a command" is shown, or something like these is shown, please "source $HOME/.cargo/env" in command line.
+如果没有rustc
+xterm h1(host) 进入后先: source $HOME/.cargo/env
