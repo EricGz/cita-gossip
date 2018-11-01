@@ -66,10 +66,16 @@ pub fn Cluster_Maintenance(){
    for i in 0..3 {
 	
 	thread::spawn(move || {
-        let alive_msg = msg::List_msg::new();
+        let alive_msg = msg::HeartBeat_msg::new();
         let op = random_filter();
         alive_msg.send(op,ture);
+
+        storage::alive_check()；
     });
     thread::sleep(Duration::from_secs(1));
+	}
 }
-}
+
+//周期检测alive消息，若超时做dead处理
+//
+//修改整顿storage后完成
