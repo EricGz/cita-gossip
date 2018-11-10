@@ -1,0 +1,17 @@
+[package]
+name = "try"
+version = "0.1.0"
+authors = ["任能"]
+
+
+[dependencies]
+
+toml = "0.4.6"
+serde = "1.0.78"
+serde_derive = "1.0.7"
+chrono = "0.4"
+
+time = "0.1.0"
+thread = "0.0.1"
+
+rand = "0.4.0"
