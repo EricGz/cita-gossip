@@ -1,27 +1,2 @@
 Gossip
-	*维护一个消息的LRU，已经收到过的消息不作处理*
-
-	pull机制 （包含版本协调器）
-	1、设计连接的建立 & 维护，从而在长时间没收到需要的消息时，能够重发或者选取其他比自己高度高的节点，进行重发
-	2、协调器的设计、在收到StateInfo比自己新/旧的情况下的处理
-	
-	neighbor节点维护
-	利用StateMsg，周期性广播，收到StateMsg，则进入NeighborInfoList，同时~
-	
-	NeighborInfoList介绍
-	功能：
-	存有每个neighbor的State信息等等（State信息包含版本），并根据每个周期收到的StateMsg进行列表维护
-	更新机制：
-	1、定期更新（e.g. 400s, 从而去除被动dead节点，为了防止某个周期表中无可发送节点，设计交错更新机制）
-	2、hashmap保证O(1)的查找，从而更快速的维护
-	
-	集群维护机制（AliveList，hashmap实现）
-	1、收到StateInfo更新AliveList时间戳
-	2、定期检查AliveList（遍历），如果有节点的时间戳超时则dead
-	3、定期push（广播）自己的AliveList（需要带时间戳）列表
-	4、收到其他节点的AliveList按照如下规则做更新：
-	遍历收到的列表，并在自己的列表中找匹配项：
-		1）如果没有匹配，则加入此条目
-		2）如果找到匹配，则仅更新时间戳比本地更的条目
-		
-	时间复杂度~
+暂无
